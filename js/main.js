@@ -2,8 +2,9 @@ $(document).ready(function(){
     PopUpHide1();
     PopUpHide2();
     PopUpHide3();
-    PopUpCompliteHide();
-
+	PopUpCompliteHide();
+	calculate(0);
+  
     $('.sro-order').validate({
    rules: {
      email: {

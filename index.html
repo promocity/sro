@@ -5,11 +5,7 @@
     <title>SRO</title>
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <!--[if IE]><link href="css/ie.css" rel="stylesheet" type="text/css" media="all"><![endif]-->
-
-    <!--[if IE 11]>
-<link rel="stylesheet" href="/css/ie.css">
-<![endif]-->
+    <!--[if IE]><link href="css/ie.css" rel="stylesheet" type="text/css"><![endif]-->
   </head>
   <body>
 	<div class="header-bg"></div>
@@ -92,7 +88,7 @@
               </div>
           </div>
 			</div>
-			<form action="index.html" class="sro-order" method="post">
+			<form action="javascript:{PopUpCompliteShow();sro_form()}" class="sro-order" method="post">
           <input id="sro-name" type="text" name="name" class="form-name required name" placeholder="Имя"></input>
           <input id="sro-tel"type="text" name="tel" class="form-tel required telephone" placeholder="Тел. (89001231212)"></input>
           <input id="sro-email" name="email" class="form-mail required mail" placeholder="Почта *"></input>
@@ -191,19 +187,27 @@
 		
   <div class="pop-up-section">
     <div class="calc-popup-overlay" id="popup1">
-      <form action="index.html" class="calc-pop-up" method="post">
+      <form action="javascript:{PopUpCompliteShow();calc_form()}" class="calc-pop-up" method="post">
         <a href="#" class="close-button" onclick="PopUpHide1()"><i class="fa fa-times"></i></a>      
-        <select size="1" id="calc-select-1">
+        <select size="1" id="calc-select-1" onchange="calculate(1)">
           <option selected="selected">Тип деятельности</option>          
-          <option>Деятельность 1</option>
-          <option>Деятельность 2</option>
-          <option>Деятельность 3</option>
+          <option>СРО строительства</option>
+          <option>СРО проектирования</option>
+          <option>СРО изыскания</option>
         </select>
-        <select size="1" id="calc-select-2">
-          <option selected="selected">Сумма ген. подряда</option>          
-          <option>100</option>
-          <option>200</option>
-          <option>300</option>
+        <select size="1" id="calc-select-2" onchange="calculate(2)">
+          <option id='none' value='none' selected="selected">Сумма ген. подряда</option>          
+          <option id='str1' value='str1'>до 10 млн.</option>
+          <option id='str2' value='str2'>до 60 млн.</option>
+          <option id='str3' value='str3'>до 500 млн.</option>
+		  <option id='str4' value='str4'>до 3 млрд.</option>
+		  <option id='str5' value='str5'>до 10 млрд.</option>
+		  <option id='str6' value='str6'>более 10 млрд.</option>
+		  <option id='pro1' value='pro1'>до 5 млн.</option>
+		  <option id='pro2' value='pro2'>до 25 млн.</option>
+		  <option id='pro3' value='pro3'>до 50 млн.</option>
+		  <option id='pro4' value='pro4'>до 300 млн.</option>
+		  <option id='pro5' value='pro5'>более 300 млн.</option>
         </select>
         <select size="1" id="calc-select-3">
           <option selected="selected">Опасность работ</option>  
@@ -213,11 +217,10 @@
         </select>
         <select size="1" id="calc-select-4">
           <option selected="selected">Тип организации</option>  
-          <option>Тип 1</option>
-          <option>Тип 2</option>
-          <option>Тип 3</option>
+          <option>ООО</option>
+          <option>ИП</option>
         </select>
-        <p class="price">15 000 000 РУБ</p>
+        <p class="price" id="calc-price-result">15 000 000 РУБ</p>
           <input id="calc-name" type="text" name="name" class="form-name required name" placeholder="Имя"></input>
           <input id="calc-tel" type="text" name="tel" class="form-tel required telephone" placeholder="Телефон... (89001231212)"></input>
           <input id="calc-email" name="email" class="form-mail required mail" placeholder="Почта *"></input>
@@ -228,13 +231,15 @@
     </div>
 
     <div class="custom-popup-overlay" id="popup2">
-      <form action="index.html" class="custom-servise" method="post">
+      <form action="javascript:{PopUpCompliteShow();custom_servise_form()}" class="custom-servise" method="post">
         <a href="#" class="close-button" onclick="PopUpHide2()"><i class="fa fa-times"></i></a>
-        <select size="1">
+        <select size="1" id="custom-servise-selected">
           <option selected="selected">Тип деятельности</option>          
-          <option>Деятельность 1</option>
-          <option>Деятельность 2</option>
-          <option>Деятельность 3</option>
+          <option>Сертификаты соответствия ISO</option>
+          <option>Повышение квалификации специалистов</option>
+          <option>Лицензирование</option>
+		  <option>Регистрация и ликвидация юридических лиц</option>
+		  <option>Правовая защита</option>
         </select>
           <input id="custom-servise-name" type="text" name="name" class="form-name required name" placeholder="Имя"></input>
           <input id="custom-servise-tel" type="text" name="tel" class="form-tel required telephone" placeholder="Телефон... (89001231212)"></input>
@@ -246,7 +251,7 @@
     </div>
 
     <div class="order-popup-overlay popup3" id="popup3">
-      <form action="javascript:PopUpCompliteShow()" class="order-form order-form-popup-content" method="post">
+      <form action="javascript:{PopUpCompliteShow();order_form()}" class="order-form order-form-popup-content" method="post">
           <a href="#" class="close-button" onclick="PopUpHide3()"><i class="fa fa-times"></i></a>
           <input id="order-form-name" type="text" name="name" class="form-name required name" placeholder="Имя"></input>
           <input id="order-form-tel" type="text" name="tel" class="form-tel required telephone" placeholder="Телефон... (89001231212)"></input>
@@ -256,6 +261,8 @@
           <p class="calc-info">информация не передается третьим лицам</p>        
       </form>      
     </div>
+  
+  </div>
 
     <div class="order-popup-overlay popup-complite" id="popup-complite">
       <div class="complite-message">
@@ -264,12 +271,12 @@
       </div>
     </div>
   
-  </div>
-
 	</div><!-- close body-wr -->
   <script src="js/jquery-2.1.4.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/main.js"></script>  
+  <script src="js/ajax_forms.js"></script>  
+  <script src="js/calculator.js"></script>  
   </body>
 
 </html>
