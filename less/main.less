@@ -1,0 +1,158 @@
+/*
+* studio 49
+*/
+@import "normalize.less";
+@import "bootstrap-gird/bootstrap.min.less";
+@import "classes.less";
+@import "var.less";
+@import "fonts.less";
+@import "media.less";    
+
+/* Layout
+------------------------------------------------------------------------------- */
+* {
+  .box-sizing;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header
+------------------------------------------------------------------------------- */
+.header {
+  max-width: 2000px;
+  margin: 0 auto;
+  padding:30px 3.25% 0 3.25%;
+  border: 1px solid #0f0;
+  height: 235px;
+}
+
+.tel-wr {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.tel { 
+  font: 30px OpenSansSemiBold,sans-serif;
+  text-decoration: none;
+  color: @mainColor;
+}
+
+.tel:hover {
+  text-decoration: none;
+  color: @mainColor;
+}
+
+.callback {
+  display: block;
+  color: @colorTwo;
+  border: @colorTwo solid 1px;
+  background-color: transparent;
+  padding: 10px 15px 10px 15px;
+  font: 18px @sansFont;
+  margin-top: 15px;
+}
+
+.callback:hover {
+  text-decoration: underline;
+}
+
+.work-wr {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.work-time {
+  display: block;
+  color: @mainColor;
+  font: 22px OpenSansSemiBold,sans-serif;
+  margin: 3px 0 0 25%;
+
+}
+
+.work-time:last-of-type {
+  padding-right: 3px;
+}
+
+.header-logo {
+  display: block;
+  margin: -10px auto;
+  width: 230px;
+  height: 160px;
+  background: url(../img/header/logo.png) no-repeat 50% -2%;
+  padding-top: 120px;
+  text-align: center;
+  font: 20px @sansFont;
+  color: @mainColor;
+}
+
+.header-logo:hover {
+  color: @mainColor;
+}
+
+.basket {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 6%;
+}
+
+.basket-logo {
+  display: inline-block;
+  vertical-align: top;
+  width: 52px;
+  height: 53px;
+  background: url(../img/header/packet.png) no-repeat 50% 50%;
+}
+
+.basket-text {
+  display: inline-block;
+  width: 255px;
+  margin-left: 10px;
+}
+
+.number-of-item, .price {
+  display: inline-block;
+  vertical-align: top;
+  color: @mainColor;
+  font-weight: bold;
+  font: 22px OpenSansBold, sans-serif;
+}
+
+.basket-caption {
+  display: inline-block;
+  vertical-align: top;
+  color: @mainColor;
+  font: 22px @sansFont;
+}
+
+.basket-order {
+  display: block;
+  background-color: transparent;
+  color: @colorTwo;
+  font: 17px @sansFont;
+  border: 1px solid @colorTwo;
+  padding: 10px 15px 10px 15px;
+  margin-top: 15px;
+}
+
+.basket-order:hover {
+  text-decoration: underline;
+  color: @colorTwo;
+}
+
+.search {
+  float: right;
+}
+
+.loupe {
+  width: 53px;
+  height: 53px;
+  background: url(../img/header/search-loupe.png) no-repeat 0 0;
+  border: 0;
+}
+
+
+
+
+
+
+
