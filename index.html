@@ -4,8 +4,12 @@
     <meta charset="utf-8">
     <title>SRO</title>
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/font.css" rel="stylesheet">	
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!--[if IE]><link href="css/ie.css" rel="stylesheet" type="text/css" media="all"><![endif]-->
+
+    <!--[if IE 11]>
+<link rel="stylesheet" href="/css/ie.css">
+<![endif]-->
   </head>
   <body>
 	<div class="header-bg"></div>
@@ -88,12 +92,12 @@
               </div>
           </div>
 			</div>
-			<form class="sro-order">
-				<input class="form-name" placeholder="Имя"></input>
-				<input class="form-tel" placeholder="+7 (9..) ... .. .."></input>
-				<input class="form-mail" placeholder="Почта *"></input>
+			<form action="index.html" class="sro-order" method="post">
+          <input id="sro-name" type="text" name="name" class="form-name required name" placeholder="Имя"></input>
+          <input id="sro-tel"type="text" name="tel" class="form-tel required telephone" placeholder="Тел. (89001231212)"></input>
+          <input id="sro-email" name="email" class="form-mail required mail" placeholder="Почта *"></input>
 				<p class="sro-order-form-caption"><span>*</span>для отправления списка необходимых документов</p>
-				<button type="submit" class="sro-order-button" onclick="PopUpShow3()">Получить допуск СРО</button>
+				<button id="sro-button" type="submit" class="sro-order-button">Получить допуск СРО</button>
 				<p class="sro-order-info">информация не передается третьим лицам</p>
 			</form><!--
 	--><div class="services-sect">
@@ -187,78 +191,84 @@
 		
   <div class="pop-up-section">
     <div class="calc-popup-overlay" id="popup1">
-      <form class="calc-pop-up" method="post">
-        <select size="1">
+      <form action="index.html" class="calc-pop-up" method="post">
+        <a href="#" class="close-button" onclick="PopUpHide1()"><i class="fa fa-times"></i></a>      
+        <select size="1" id="calc-select-1">
           <option selected="selected">Тип деятельности</option>          
           <option>Деятельность 1</option>
           <option>Деятельность 2</option>
           <option>Деятельность 3</option>
         </select>
-        <select size="1">
+        <select size="1" id="calc-select-2">
           <option selected="selected">Сумма ген. подряда</option>          
           <option>100</option>
           <option>200</option>
           <option>300</option>
         </select>
-        <select size="1">
+        <select size="1" id="calc-select-3">
           <option selected="selected">Опасность работ</option>  
           <option>Низкая опасность</option>
           <option>Средняя опасность</option>
           <option>Высокая опасность</option>
         </select>
-        <select size="1">
+        <select size="1" id="calc-select-4">
           <option selected="selected">Тип организации</option>  
           <option>Тип 1</option>
           <option>Тип 2</option>
           <option>Тип 3</option>
         </select>
         <p class="price">15 000 000 РУБ</p>
-          <input class="form-name" placeholder="Имя"></input>
-          <input class="form-tel" placeholder="+7 (9..) ... .. .."></input>
-          <input class="form-mail" placeholder="Почта *"></input>
+          <input id="calc-name" type="text" name="name" class="form-name required name" placeholder="Имя"></input>
+          <input id="calc-tel" type="text" name="tel" class="form-tel required telephone" placeholder="Телефон... (89001231212)"></input>
+          <input id="calc-email" name="email" class="form-mail required mail" placeholder="Почта *"></input>
           <p class="calc-form-caption"><span>*</span>для отправления списка необходимых документов</p>
-          <button type="submit" class="calc-button" onclick="PopUpHide1()">Получить допуск СРО</button>
+          <button id="calc-button" type="submit" class="calc-button">Получить допуск СРО</button>
           <p class="calc-info">информация не передается третьим лицам</p>        
       </form>
     </div>
 
     <div class="custom-popup-overlay" id="popup2">
-      <form class="custom-servise" method="post">
+      <form action="index.html" class="custom-servise" method="post">
+        <a href="#" class="close-button" onclick="PopUpHide2()"><i class="fa fa-times"></i></a>
         <select size="1">
           <option selected="selected">Тип деятельности</option>          
           <option>Деятельность 1</option>
           <option>Деятельность 2</option>
           <option>Деятельность 3</option>
         </select>
-          <input class="form-name" placeholder="Имя"></input>
-          <input class="form-tel" placeholder="+7 (9..) ... .. .."></input>
-          <input class="form-mail" placeholder="Почта *"></input>
+          <input id="custom-servise-name" type="text" name="name" class="form-name required name" placeholder="Имя"></input>
+          <input id="custom-servise-tel" type="text" name="tel" class="form-tel required telephone" placeholder="Телефон... (89001231212)"></input>
+          <input id="custom-servise-email" name="email" class="form-mail required mail" placeholder="Почта *"></input>
           <p class="calc-form-caption"><span>*</span>для отправления списка необходимых документов</p>
-          <button type="submit" class="custom-servise-button" onclick="PopUpHide2()">Заказать услугу</button>
+          <button id="custom-servise-button" type="submit" name="submit" class="custom-servise-button">Заказать услугу</button>
           <p class="calc-info">информация не передается третьим лицам</p>        
       </form>
     </div>
 
-    <div class="order-popup-overlay" id="popup3">
-      <form class="order-form order-form-popup-content" method="post">
-          <input class="form-name" placeholder="Имя"></input>
-          <input class="form-tel" placeholder="+7 (9..) ... .. .."></input>
-          <input class="form-mail" placeholder="Почта *"></input>
+    <div class="order-popup-overlay popup3" id="popup3">
+      <form action="javascript:PopUpCompliteShow()" class="order-form order-form-popup-content" method="post">
+          <a href="#" class="close-button" onclick="PopUpHide3()"><i class="fa fa-times"></i></a>
+          <input id="order-form-name" type="text" name="name" class="form-name required name" placeholder="Имя"></input>
+          <input id="order-form-tel" type="text" name="tel" class="form-tel required telephone" placeholder="Телефон... (89001231212)"></input>
+          <input id="order-form-email" name="email" class="form-mail required mail" placeholder="Почта *"></input>
           <p class="calc-form-caption"><span>*</span>для отправления списка необходимых документов</p>
-          <button type="submit" class="order-form-button" onclick="PopUpHide3()">Получить допуск к СРО</button>
+          <button id="order-form-button" type="submit" name="submit" class="order-form-button">Получить допуск к СРО</button>
           <p class="calc-info">информация не передается третьим лицам</p>        
       </form>      
+    </div>
+
+    <div class="order-popup-overlay popup-complite" id="popup-complite">
+      <div class="complite-message">
+        <h3>Данные успешно отправлены, спасибо за заявку!</h3>
+        <a href="#" onclick="PopUpCompliteHide()">Продолжить</a>
+      </div>
     </div>
   
   </div>
 
-
-
-
-
-
 	</div><!-- close body-wr -->
-  <script src="js/jquery-2.1.4.min.js"></script>  
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
   <script src="js/main.js"></script>  
   </body>
 
