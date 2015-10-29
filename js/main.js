@@ -5,6 +5,13 @@ $(document).ready(function(){
 	PopUpCompliteHide();
 	calculate(0);
   
+  $("#sro-tel").mask("+7 (999) 999-9999");
+  $("#order-form-tel").mask("+7 (999) 999-9999");
+  $("#calc-tel").mask("+7 (999) 999-9999");
+  $("#custom-servise-tel").mask("+7 (999) 999-9999");
+
+
+
     $('.sro-order').validate({
    rules: {
      email: {
@@ -16,10 +23,7 @@ $(document).ready(function(){
       minlength: 3      
      },
      tel: {
-      required: true,
-      minlength: 11,
-      maxlength: 11,
-      digits: true
+      required: true
      },
      password: {
         required: true,
@@ -38,9 +42,7 @@ $(document).ready(function(){
          email: "Неверный формат email адреса."
        },
        tel: {
-         required: "Пожалуйста введите телефон.",
-         minlength: "Телефон должен содержать 11 символов начиная 8.",
-         digits: "Телефонный номер должен содержать только цифры."
+         required: "Пожалуйста введите телефон +7 (9..) ... .. .."
        },
       password: {
         required: 'Please type a password',
@@ -63,10 +65,7 @@ $(document).ready(function(){
       minlength: 3      
      },
      tel: {
-      required: true,
-      minlength: 11,
-      maxlength: 11,
-      digits: true
+      required: true
      },
      password: {
         required: true,
@@ -85,9 +84,7 @@ $(document).ready(function(){
          email: "Неверный формат email адреса."
        },
        tel: {
-         required: "Пожалуйста введите телефон +79.. ... .. ..",
-         minlength: "Телефон должен содержать 11 символов начиная 8.",
-         digits: "Телефонный номер должен содержать только цифры."
+         required: "Пожалуйста введите телефон +7 (9..) ... .. .."
        },
       password: {
         required: 'Please type a password',
@@ -110,10 +107,7 @@ $(document).ready(function(){
       minlength: 3      
      },
      tel: {
-      required: true,
-      minlength: 11,
-      maxlength: 11,
-      digits: true
+      required: true
      },
      password: {
         required: true,
@@ -132,9 +126,7 @@ $(document).ready(function(){
          email: "Неверный формат email адреса."
        },
        tel: {
-         required: "Пожалуйста введите телефон +79.. ... .. ..",
-         minlength: "Телефон должен содержать 11 символов начиная 8.",
-         digits: "Телефонный номер должен содержать только цифры."
+         required: "Пожалуйста введите телефон +7 (9..) ... .. .."
        },
       password: {
         required: 'Please type a password',
@@ -157,10 +149,7 @@ $(document).ready(function(){
       minlength: 3      
      },
      tel: {
-      required: true,
-      minlength: 11,
-      maxlength: 11,
-      digits: true
+      required: true
      },
      password: {
         required: true,
@@ -179,9 +168,7 @@ $(document).ready(function(){
          email: "Неверный формат email адреса."
        },
        tel: {
-         required: "Пожалуйста введите телефон +79.. ... .. ..",
-         minlength: "Телефон должен содержать 11 символов начиная 8.",
-         digits: "Телефонный номер должен содержать только цифры."
+         required: "Пожалуйста введите телефон +7 (9..) ... .. .."
        },
       password: {
         required: 'Please type a password',
