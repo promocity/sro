@@ -3,7 +3,7 @@
   <head lang="ru">
     <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>    
     <meta charset="UTF-8">
-    <title>Studio 49 | Главная</title>
+    <title>Studio 49 | Комментарии</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css?v=1.0">
@@ -83,9 +83,38 @@
                 <a class="banner" href="#"><img src="img/aside/banner.jpg" alt="banner"></a>
               </div>
           </aside>
-          <section class="main-content">
-
-              <div>asdd</div>
+          <section class="main-content comments-section"> 
+              <h1>отзывы</h1>
+              <a href="#">Обслуживание в ресторане</a><!--TODO это будут tabbed panels -->
+              <a href="#">Сервис доставки</a>
+              <a href="#">Качество блюд</a>                            
+              <div class="comment">
+                <p class="comment-author">Патрушева Мария Николаевна</p>
+                <p class="comment-article">Тема отзыва: <span>Горячие блюда</span></p>
+                <div class="stars">stars x5</div>
+                <p class="comment-text">Это что-то невероятное !!! Раньше был у них постоянным гостем, когда они были ещё на Малышева-Восточной, потом на полгода потерял их из виду, но как-то случайно проезжая по Куйбышева случайно увидел вывеску "Югославия"...) Заезжаю теперь регулярно, особенно в дни после тренировок, когда аппетит просто зверский...) Всегда беру на тарелке, так как в виде бургера есть не очень удобно. Обычно беру "Плескавицу для гурманов", но иногда пробую что-то новое. В общем, там вкусно всё !!! 
+Рекомендую всем !!!</p>
+              </div>
+              <div class="comment">
+                <p class="comment-author">Патрушева Мария Николаевна</p>
+                <p class="comment-article">Тема отзыва: <span>Горячие блюда</span></p>
+                <div class="stars">stars x5</div>
+                <p class="comment-text">Это что-то невероятное !!! Раньше был у них постоянным гостем, когда они были ещё на Малышева-Восточной, потом на полгода потерял их из виду, но как-то случайно проезжая по Куйбышева случайно увидел вывеску "Югославия"...) Заезжаю теперь регулярно, особенно в дни после тренировок, когда аппетит просто зверский...) Всегда беру на тарелке, так как в виде бургера есть не очень удобно. Обычно беру "Плескавицу для гурманов", но иногда пробую что-то новое. В общем, там вкусно всё !!! 
+Рекомендую всем !!!</p>
+              </div>
+              <form class="your-comment" action="/" method="post">
+                <h2 class="your-comment-head">Оставьте свой отзыв</h2>
+                <div class="stars">stars x5</div>
+                <input type="text" name="name" placeholder="Имя или псевдоним">
+                <select id="comment-theme" size="1">
+                  <option selected="selected">Тема сообщения</option>          
+                  <option>Тема сообщения 1</option>
+                  <option>Тема сообщения 2</option>
+                  <option>Тема сообщения 3</option>
+                </select>
+                <textarea name="message" id="" cols="20" rows="3"></textarea>
+                <button class="write" id="write" type="submit" >Написать</button>
+              </form>
 
           </section>
         </div>
