@@ -45,14 +45,14 @@
               </form>
               <form action="/" class="search" id="search">
                 <button type="submit" class="loupe"></button>
-                <input type="search" name="search" placeholder="______________" id="search-field">
+                <input class="search-field" type="search" name="search" placeholder="______________________" id="search-field">
               </form>
             </div>
          </div>
          <div class="row">
            <nav>
-             <ul>
-               <li><a href="#">О ресторане</a></li>
+             <ul class="main-nav">
+               <li><a class="active" href="#">О ресторане</a></li>
                <li><a href="#">Доставка и оплата</a></li>
                <li><a href="#">Акции</a></li>
                <li><a href="#">Контакты</a></li>
@@ -61,20 +61,80 @@
          </div>
         </header>
 
-      </div>
+        <div class="content-wr">
+          <aside class="aside">
+            <div class="section-name">Пицца / Первое блюдо</div>
+              <ul class="aside-nav">
+                <li><a href="#">Пицца</a></li>
+                <li><a href="#">Роллы</a></li>
+                <li><a href="#">Холодные закуски</a></li>
+                <li><a href="#">Салаты</a></li>
+                <li><a href="#">Горячие закуски</a></li>
+                <li><a href="#">Супы</a></li>
+                <li><a href="#">Горячие блюда</a></li>
+                <li><a href="#">Блюда из рыбы</a></li>
+                <li><a href="#">Паста</a></li>
+                <li><a href="#">Гарниры</a></li>
+                <li><a href="#">Десерты</a></li>
+                <li><a href="#">Напитки</a></li>
+              </ul>
+              <div class="aside-banner">
+                <a class="banner" href="#"><img src="img/aside/banner.jpg" alt="banner"></a>
+                <a class="banner" href="#"><img src="img/aside/banner.jpg" alt="banner"></a>
+              </div>
+
+          </aside>
+        </div>
+
+
+      </div><!-- container-fluid -->
    
 
-      <aside>
-        Aside
-      </aside>
 
-      <section class="main-content">
-        Content
-      </section>
-    
-      <section class="footer">
-        Footer
-      </section>
+
+
+      
+      <div class="footer-bg clearfix">
+        <footer class="footer content-wr container-fluid">
+          <div class="row">
+            <div class="col-md-9">
+              <ul class="about-restaurant">
+                <p>О ресторане</p>
+                <li><a href="#">История</a></li>
+                <li><a href="#">Галерея</a></li>
+                <li><a href="#">Повара</a></li>
+              </ul>
+              <ul class="support">
+                <p>Поддержка</p>
+                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="#">Правила продажи</a></li>
+                <li><a href="#">Вопросы и ответы</a></li>
+              </ul>
+              <ul class="interesting">
+                <p>Интересное</p>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Акции</a></li>
+                <li><a href="#">Рецепты</a></li>
+              </ul>
+              <ul class="pay-method">
+                <p>Формы оплаты</p>
+                <li><a href="#">Яндекс деньги</a></li>
+                <li><a href="#">Webmoney</a></li>
+                <li><a href="#">Сбербанк онлайн</a></li>
+                <li><a href="#">Карты Visa</a></li>
+                <li><a href="#">Карты Maestro</a></li>
+                <li><a href="#">Карты MasterCard</a></li>
+              </ul>
+              <address class="address">ООО "Studio49", г. Екатеринбург, Краснолесья 49</address>
+              <p class="copyright">Все права защищены, 2015 год</p>
+            </div>
+
+            <div class="col-md-3">dsaadsdasds</div>            
+          </div>
+
+        </footer>        
+      </div>
+
     
     <script src="js/main.js"></script>
   </div>

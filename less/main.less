@@ -16,14 +16,18 @@
   margin: 0;
 }
 
+.content-wr {
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 0 3.25%;
+}
+
 /* Header
 ------------------------------------------------------------------------------- */
 .header {
   max-width: 2000px;
   margin: 0 auto;
-  padding:30px 3.25% 0 3.25%;
-  border: 1px solid #0f0;
-  height: 235px;
+  padding: 30px 3.25% 0 3.25%;
 }
 
 .tel-wr {
@@ -144,15 +148,241 @@
 }
 
 .loupe {
+  display: inline-block;
   width: 53px;
   height: 53px;
   background: url(../img/header/search-loupe.png) no-repeat 0 0;
   border: 0;
 }
 
+.search-field {
+  float: right;
+  color: @mainColor;
+  font: 22px @sansFont;
+  border: 0;
+  margin: 25px 0 0 20px;
+}
 
+.main-nav {
+  list-style-type: none;
+  text-align: center;
+  padding: 30px 0;
+  border-top: #bfbfbf solid 2px;
+  border-bottom: #bfbfbf solid 2px;
+  margin-top: 15px;
+}
 
+.main-nav li {
+  display: inline-block;
+  vertical-align: top;
+}
 
+.main-nav li:after {
+  content: '';
+  display: inline-block;
+  padding: 0 3em;
+  width: 17px;
+  height: 17px;
+  background: url(../img/header/nav-separator.png) no-repeat 50% 0;
+}
 
+.main-nav li:last-of-type:after {
+  display: none;
+}
 
+.main-nav li a {
+  color: @mainColor;
+  font: 22px OpenSansSemiBold, sans-serif;
+}
 
+.main-nav .active {
+  color: @colorOne;;
+}
+
+/* Aside
+------------------------------------------------------------------------------- */
+.aside {
+  width: 350px;
+  float: left;
+}
+
+.section-name {
+  font: 20px @sansFont;
+  margin-top: 30px;
+  color: @mainColor;
+}
+
+.aside-nav {
+  list-style-type: none;
+}
+
+.aside-nav li {
+  margin-top: 30px
+}
+
+.aside-nav li:first-child {
+  margin-top: 30px;
+}
+
+.aside-nav li a {
+  display: inline-block;
+  font: 25px @Intro;
+  color: @mainColor;
+  height: 45px;
+  padding: 6px 0 0 60px;
+}
+
+.aside-nav li:nth-child(1) a {
+  background: url(../img/aside/sprite.png) no-repeat 0 5px;
+}
+
+.aside-nav li:nth-child(1) a:hover {
+  background: url(../img/aside/sprite-active.png) no-repeat 0 5px;
+}
+
+.aside-nav li:nth-child(2) a {
+  background: url(../img/aside/sprite.png) no-repeat 0 -64px;
+}
+
+.aside-nav li:nth-child(2) a:hover {
+  background: url(../img/aside/sprite-active.png) no-repeat 0 -64px;
+}
+
+.aside-nav li:nth-child(3) a {
+  background: url(../img/aside/sprite.png) no-repeat 0 -135px;
+}
+
+.aside-nav li:nth-child(3) a:hover {
+  background: url(../img/aside/sprite-active.png) no-repeat 0 -135px;
+}
+
+.aside-nav li:nth-child(4) a {
+  background: url(../img/aside/sprite.png) no-repeat 0 -205px;
+}
+
+.aside-nav li:nth-child(4) a:hover {
+  background: url(../img/aside/sprite-active.png) no-repeat 0 -205px;
+}
+
+.aside-nav li:nth-child(5) a {
+  background: url(../img/aside/sprite.png) no-repeat 0 -275px;
+}
+
+.aside-nav li:nth-child(5) a:hover {
+  background: url(../img/aside/sprite-active.png) no-repeat 0 -275px;
+}
+
+.aside-nav li:nth-child(6) a {
+  background: url(../img/aside/sprite.png) no-repeat 0 -350px;
+}
+
+.aside-nav li:nth-child(6) a:hover {
+  background: url(../img/aside/sprite-active.png) no-repeat 0 -350px;
+}
+
+.aside-nav li:nth-child(7) a {
+  background: url(../img/aside/sprite.png) no-repeat 0 -420px;
+}
+
+.aside-nav li:nth-child(7) a:hover {
+  background: url(../img/aside/sprite-active.png) no-repeat 0 -420px;
+}
+
+.aside-nav li:nth-child(8) a {
+  background: url(../img/aside/sprite.png) no-repeat 0 -490px;
+}
+
+.aside-nav li:nth-child(8) a:hover {
+  background: url(../img/aside/sprite-active.png) no-repeat 0 -490px;
+}
+
+.aside-nav li:nth-child(9) a {
+  background: url(../img/aside/sprite.png) no-repeat 0 -560px;
+}
+
+.aside-nav li:nth-child(9) a:hover {
+  background: url(../img/aside/sprite-active.png) no-repeat 0 -560px;
+}
+
+.aside-nav li:nth-child(10) a {
+  background: url(../img/aside/sprite.png) no-repeat 0 -630px;
+}
+
+.aside-nav li:nth-child(10) a:hover {
+  background: url(../img/aside/sprite-active.png) no-repeat 0 -630px;
+}
+
+.aside-nav li:nth-child(11) a {
+  background: url(../img/aside/sprite.png) no-repeat 0 -700px;
+}
+
+.aside-nav li:nth-child(11) a:hover {
+  background: url(../img/aside/sprite-active.png) no-repeat 0 -700px;
+}
+
+.aside-nav li:nth-child(12) a {
+  background: url(../img/aside/sprite.png) no-repeat 0 -770px;
+}
+
+.aside-nav li:nth-child(12) a:hover {
+  background: url(../img/aside/sprite-active.png) no-repeat 0 -770px;
+}
+
+.aside-nav li a:hover {
+  color: @colorOne;
+  text-decoration: none;
+}
+
+.aside-banner {
+  margin-top: 55px;
+}
+
+.banner {
+  display: block;
+  width: 350px;
+  height: 350px;
+  margin-top: 60px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.aside-banner .banner:first-of-type {
+  margin-top: 0;
+}
+
+/* Footer
+------------------------------------------------------------------------------- */
+.footer-bg {
+  width: 100%;
+  height: 500px;
+  background: @footerBgColor;
+}
+
+.footer {
+  color: #fff;
+  padding-top: 30px;
+  border-top: #8e6b6b solid 1px;
+}
+
+.about-restaurant {
+
+}
+
+.about-restaurant p,
+.support p,
+.interesting p,
+.pay-method p
+ {
+  text-transform: uppercase;
+  font: 27px @Intro;
+}
+
+.footer ul li {
+  list-style-type: none;
+
+}
+
+.footer ul li a {
+  color: #fff;
+  font: 20px @sansFont;
+}
